@@ -30,7 +30,9 @@ namespace NewtonSoftTestSuite
             //    output.Add(p.Name, GetPropertyValueAndType(p).ToList());
             //};
 
-            ResolveType(str);
+            Console.Write(ResolveType(str));
+            Console.Read();
+
         }
 
 
@@ -67,7 +69,7 @@ namespace NewtonSoftTestSuite
             //    }
             //}
 
-            return null;
+            return JObject.FromObject(output).ToString();
         }
 
         private static object PrettyStringRadioBtnResolver(KeyValuePair<string, dynamic> kvp)
